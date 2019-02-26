@@ -1,0 +1,22 @@
+.Hex-color-input {
+    width: 40%;
+    margin: 10% auto;
+}
+
+.Hex-color-input input {
+    width: 100%;
+    border: 1px solid black;
+    height: 2vw;
+}
+
+.Hex-color-input .Validation-error {
+    color: red;
+    font-size: 70%;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 767px) {
+    .Hex-color-input input {
+        height: 6vw;
+    }
+}

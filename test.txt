@@ -1,0 +1,32 @@
+tests: 
+----- App
+
+1. render header tag
+2. render main tag
+3. render footer tag
+4.render HexColorInput component
+5. render div with id bgColor with background #ffffff
+5. when state backgroundColor is changed the 
+div with id bgColor has a backgroundColor css property set to the value of the state backgroundColor
+6. when changeBg function is called with color parameter the state bgColor isChanged and 
+div with id bgColor has a backgroundColor css property set to the value of the state backgroundColor
+
+--- HexColorInput
+
+1. when the state value changes the input value is changes accordingly
+2. when state error is true the validation error is appeared
+2. when state error is false the validation error is not appeared
+2. If the first char that inserted to the input is # or '' the state value is changed to the event.target.value
+4. If the first char that inserted to the input is # or '' the state error is false
+3. If the first char that inserted to the input is not # and not '' the state is not changed
+4. If the first char that inserted to the input is not # and not '' the state error is true
+5. If the 2-7 chars that inserted to the input are A-F or a-f or 0-9 the state is changed to the event.target.value
+6. If the 2-7 chars that inserted to the input are A-F or a-f or 0-9 the state error is false
+7. If the 2-7 chars that inserted to the input are not A-F or a-f or 0-9 the state is not changed
+8. If the 2-7 chars that inserted to the input are A-F or a-f or 0-9 state error is true
+9. if we insert 8th char to the input the state is not changed
+10. if we insert 8th char to the input the state error is true
+11. 1st - 3rd char that inserted the handleChange func prop is not called
+11. 4th- 7th char that inserted  the handleChange func prop is called
+12. if we insert 8th char to the input the handleChange func prop is not called
+

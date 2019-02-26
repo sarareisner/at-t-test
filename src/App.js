@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import HexColorInput from './components/HexColorInput'
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      backgroundColor: '#ffffff'
+    }
+  }
+  // change bg color to left div
+  changeBg = (color) => {
+    this.setState({backgroundColor: color})
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <header className="App-header"></header>
+        <main className="App-main">
+          <div>
+          <HexColorInput handleChange={this.changeBg}/>
+          </div>
+          <div id="bgColor" style={{backgroundColor: this.state.backgroundColor}}>
+          </div>
+        </main>
+        <footer className="App-footer"></footer>
       </div>
     );
   }
